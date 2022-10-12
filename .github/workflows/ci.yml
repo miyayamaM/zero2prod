@@ -2,7 +2,7 @@ name: Rust
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "feature/*" ]
   pull_request:
     branches: [ "master" ]
 
@@ -43,7 +43,7 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Install stable toolchain
-        uses: actions-rs/toochain@v1
+        uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: stable
@@ -60,14 +60,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        override: true
-        components: rustfmt
+        with:
+          toolchain: stable
+          override: true
+          components: rustfmt
       - uses: actions-rs/cargo@v1
         with:
-        command: fmt
-        args: --all -- --check
+          command: fmt
+          args: --all -- --check
 
   clippy:
     name: Clippy
