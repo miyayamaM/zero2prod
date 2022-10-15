@@ -111,7 +111,7 @@ jobs:
       - name: Install Dependencies
         run: yarn
       - name: Run Danger
-        run: yarn danger
+        run: yarn danger:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
