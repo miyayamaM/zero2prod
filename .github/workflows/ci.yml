@@ -106,11 +106,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Danger
-      uses: danger/danger-js@11.0.2
+    - name: Install yarn
+      run: npm i -g yarn
+    - name: Install Dependencies
+      run: yarn
+    - name: Run Danger
+      run: yarn danger
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DANGER_DISABLE_TRANSPILATION: true
 
 
 
