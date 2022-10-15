@@ -122,7 +122,7 @@ jobs:
   #       run: yarn danger
   #       env:
   #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-danger:
+  danger:
     name: Danger JS
     runs-on: ubuntu-latest
     steps:
