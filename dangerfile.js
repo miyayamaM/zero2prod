@@ -1,4 +1,4 @@
-const incomingBranchName = danger.git.pr.sourceRefName
-const baseBranchName = danger.git.pr.targetRefName
+const incomingBranchName = github.pr_json['sourceRefName']
+const baseBranchName = github.pr_json['targetRefName']
 
 fail('You will merge' + baseBranchName + 'from' + incomingBranchName)
