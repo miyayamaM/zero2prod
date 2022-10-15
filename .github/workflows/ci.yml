@@ -123,6 +123,13 @@ jobs:
   #       env:
   #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   danger:
+    permissions:
+      actions: write
+      checks: write
+      contents: write
+      issues: write
+      pull-requests: write
+      statuses: write
     name: Danger JS
     runs-on: ubuntu-latest
     steps:
