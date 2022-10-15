@@ -1,3 +1,5 @@
+import danger from "danger"
+
 const hasChangelog = danger.git.modified_files.includes('CHANGELOG.md')
 const isTrivial = (danger.github.pr.body + danger.github.pr.title).includes(
   '#trivial'
