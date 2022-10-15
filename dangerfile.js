@@ -1,10 +1,4 @@
-import danger from "danger"
+const incomingBranchName = danger.git.pr.sourceRefName
+const baseBranchName = danger.git.pr.targetRefName
 
-const hasChangelog = danger.git.modified_files.includes('CHANGELOG.md')
-const isTrivial = (danger.github.pr.body + danger.github.pr.title).includes(
-  '#trivial'
-)
-
-if (!hasChangelog && !isTrivial) {
-  fail('Please add a changelog entry for your changes.')
-}
+fail('You will merge' + baseBranchName + 'from' + incomingBranchName)
