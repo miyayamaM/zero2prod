@@ -106,12 +106,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Prepare Node Env
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
       - name: Install yarn
         run: npm i -g yarn
+
       - name: Install Dependencies
         run: yarn
+
+      - name: Install danger
+        run: yarn add danger --dev
+
       - name: Run Danger
-        run: yarn danger:ci
+        run: yarn danger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
