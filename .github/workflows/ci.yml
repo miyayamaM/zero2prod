@@ -146,7 +146,7 @@ jobs:
         run: yarn
 
       - name: Run Danger
-        run: yarn danger
+        run: danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
