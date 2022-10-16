@@ -26,5 +26,5 @@ const headBranchName = danger.github.pr.head.ref
 const baseBranchName = danger.github.pr.base.ref
 
 if (baseBranchName === 'main' && !headBranchName.startsWith('release/')) {
-  fail(baseBranchName + ' branch can only be merged with ' + headBranchName + ' branch.')
+  fail(baseBranchName + ' branch cannot be merged with ' + headBranchName + ' branch.')
 }
