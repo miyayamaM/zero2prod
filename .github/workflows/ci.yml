@@ -139,8 +139,11 @@ jobs:
       - name: Initialize yarn
         run: yarn init -y
 
-      - name: Install danger
+      - name: Add danger to package.json
         run: yarn add danger --dev
+
+      - name: Install danger
+        run: yarn
 
       - name: Run Danger
         run: yarn danger
