@@ -136,6 +136,9 @@ jobs:
       - name: Install yarn
         run: npm isntall -g yarn
 
+      - name: Initialize yarn
+        run: yarn init
+
       - name: Install danger
         run: yarn add danger --dev
 
