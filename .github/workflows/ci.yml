@@ -134,10 +134,7 @@ jobs:
           node-version: 18
 
       - name: Install yarn
-        run: npm i -g yarn
-
-      - name: Install Dependencies
-        run: yarn
+        run: npm isntall -g yarn
 
       - name: Install danger
         run: yarn add danger --dev

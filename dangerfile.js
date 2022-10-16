@@ -8,16 +8,14 @@ const allowedMergingBranchList = {
   'develop': ['feature']
 }
 
-const allowedMergingBranch = allowedMergingBranchList[baseBranchName]
-
 let canMerge = false;
 
-for (var allowedPrefix in allowedMergingBranch) {
+for (var allowedPrefix in allowedMergingBranchList[baseBranchName]) {
   if (incomingBranchName.startsWith(allowedPrefix)) {
     canMerge = true
   }
 }
 
 if (!canMerge) {
-  fail('Merging ' + baseBranchName + ' branch with ' + incomingBranchName + 'branch is not allowed.')
+  fail('Merging ' + baseBranchName + ' branch with ' + incomingBranchName + ' branch is not allowed.')
 }
