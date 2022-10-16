@@ -1,4 +1,4 @@
-import { danger } from 'danger';
+// import danger from 'danger';
 
 const incomingBranchName = danger.github.pr.head.ref
 const baseBranchName = danger.github.pr.base.ref
