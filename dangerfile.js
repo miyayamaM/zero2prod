@@ -20,10 +20,10 @@
 //   fail('Merging ' + baseBranchName + ' branch with ' + incomingBranchName + ' branch is not allowed.')
 // }
 
-// import { danger } from 'danger';
+import { danger, fail } from 'danger';
 
-const headBranchName = danger.github.pr.head.ref
 const baseBranchName = danger.github.pr.base.ref
+const headBranchName = danger.github.pr.head.ref
 
 if (baseBranchName === 'main' && !headBranchName.startsWith('release/')) {
   fail(baseBranchName + ' branch cannot be merged with ' + headBranchName + ' branch.')
