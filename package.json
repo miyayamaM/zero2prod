@@ -1,0 +1,12 @@
+{
+  "name": "zero2prod",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:miyayamaM/zero2prod.git",
+  "author": "miyayamaM <pendulum.ngt.4010@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "danger": "^11.1.4",
+    "eslint": "^8.25.0"
+  }
+}
