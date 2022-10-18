@@ -20,7 +20,7 @@
 //   fail('Merging ' + baseBranchName + ' branch with ' + incomingBranchName + ' branch is not allowed.')
 // }
 
-// import { danger, fail } from 'danger';
+import { danger, fail } from 'danger';
 
 const baseBranchName = danger.github.pr.base.ref
 const headBranchName = danger.github.pr.head.ref
