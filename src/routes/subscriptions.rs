@@ -4,7 +4,6 @@ use sqlx::PgPool;
 use uuid::Uuid;
 
 #[derive(serde::Deserialize)]
-#[allow(dead_code)]
 pub struct FormData {
     email: String,
     name: String,
@@ -29,6 +28,5 @@ pub async fn subscribe(form: web::Form<FormData>, pool: web::Data<PgPool>) -> im
             println!("Failed to execute query: {}", e);
             HttpResponse::InternalServerError().finish()
         }
-    };
-    HttpResponse::Ok().finish()
+    }
 }
