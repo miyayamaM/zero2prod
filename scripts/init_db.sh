@@ -32,6 +32,10 @@ then
       postgres -N 1000
 fi
 
+# if fails, run
+# sudo lsof -i:5432
+# kill <pid>
+
 # Keep pinging Postgres until it's ready to accept commands
 export PGPASSWORD="${DB_PASSWORD}"
 
