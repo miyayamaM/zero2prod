@@ -32,9 +32,10 @@ then
       postgres -N 1000
 fi
 
-# if fails, run
+# "docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:5432 -> 0.0.0.0:0: listen tcp 0.0.0.0:5432: bind: address already in use.")
+# if fails with this error, run following commands
 # sudo lsof -i:5432
-# kill <pid>
+# sudo kill <pid>
 
 # Keep pinging Postgres until it's ready to accept commands
 export PGPASSWORD="${DB_PASSWORD}"
