@@ -2,3 +2,4 @@
 .idea
 /node_modules
 sqlx-data.json
+.DS_Store
